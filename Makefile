@@ -8,7 +8,13 @@ BUNDLE_PDF := $(DIST_DIR)/bundle.pdf
 all: $(PDF_FILES) $(BUNDLE_PDF)
 
 $(BUILD_DIR)/%.pdf: $(SRC_DIR)/%.md | $(BUILD_DIR)
-	pandoc $< -o $@
+	pandoc $< \
+		-V geometry:a4paper \
+		-V geometry:margin=2cm \
+		-V mainfont="DejaVu Serif" \
+		-V monofont="DejaVu Sans Mono" \
+		--pdf-engine=xelatex \
+		-o $@
 
 $(BUILD_DIR):
 	mkdir -p $(BUILD_DIR)
