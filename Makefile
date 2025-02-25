@@ -27,4 +27,7 @@ $(BUNDLE_PDF): $(PDF_FILES) | $(DIST_DIR)
 
 convert_one: $(BUILD_DIR)/$(file).pdf
 
-.PHONY: all convert_one
+clean:
+	rm -rf $(BUILD_DIR) $(DIST_DIR)
+
+.PHONY: all convert_one clean
