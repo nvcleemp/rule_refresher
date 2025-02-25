@@ -6,6 +6,7 @@ Rule Refresher is a set of AI-generated one-pagers containing a refresher for bo
 
 - [Pandoc](https://pandoc.org/)
 - [pdfunite](https://manpages.ubuntu.com/manpages/bionic/man1/pdfunite.1.html)
+- [XeLaTeX](https://www.tug.org/xetex/)
 
 ## Installation
 
@@ -33,6 +34,18 @@ sudo apt-get install poppler-utils
 
 # On macOS using Homebrew
 brew install poppler
+```
+
+### XeLaTeX
+
+XeLaTeX can also be installed via package managers. It is part of the TeX Live distribution:
+
+```sh
+# On Debian-based systems
+sudo apt-get install texlive-xetex
+
+# On macOS using Homebrew
+brew install --cask mactex
 ```
 
 ## Usage
