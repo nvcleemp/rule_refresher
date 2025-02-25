@@ -1,32 +1,41 @@
-# Castles of Burgundy - Rule Refresher
+# Agricola - Rule Refresher
 
 ## Setup
-- Each player takes a **player board** and **starting Silverlings**.
-- Place the **main game board** in the center.
-- Sort and stack **hex tiles** by type.
-- Shuffle and place **Goods Tiles** face-down in stacks.
-- Each player rolls **2 dice** to determine turn order.
-- Place **workers**, **dice**, and **Silverlings** nearby.
+- Each player takes a **farm board**, **family members**, and a **starting hand** of Occupations and Minor Improvements.
+- Place the **main board** in the center.
+- Sort and place **Action Cards**, **Major Improvements**, and **Resource Tokens**.
+- Each player starts with **2 Family Members**, **food tokens**, and a **wooden hut** with 2 rooms.
+- Prepare **Round Cards** in order for the chosen game mode.
 
 ## Basic Rules
 ### Turn Structure (Each Round)
-1. **Roll Dice**: All players roll their two dice.
-2. **Turn Actions** (Players take turns spending dice for actions):
-   - **Take a Hex Tile** from the main board (number must match die roll).
-   - **Place a Hex Tile** from storage onto the player board (matching number and terrain type).
-   - **Sell Goods** (Goods type must match a die roll).
-   - **Take Workers** (Spend any die to gain 2 workers).
-3. **End of Phase**: After 5 rounds, refill hex tiles and continue to the next phase.
+1. **Round Start**
+   - Reveal a new **Round Card** (new action space available).
+   - Add resources to accumulating action spaces.
+2. **Work Phase**
+   - Players take turns placing one **Family Member** at a time on an available action space.
+   - Actions include **gathering resources, plowing fields, building fences, expanding family, etc.**
+3. **Return Workers**
+   - After all have placed workers, retrieve them for the next round.
+4. **Feeding Phase (Certain Rounds)**
+   - Each family member requires **2 Food** (1 for newborns in the first round after birth).
+   - Food can come from resources, cooking, or begging (if short, take Begging Cards for -3 points each).
+5. **Round End**
+   - Progress marker advances, next round begins.
 
-### Scoring
-- Points are earned by **placing hex tiles**, **selling goods**, and **completing regions**.
-- Bonus points for **early completion of regions**.
-- **Final Scoring** includes Silverlings, Goods, and special tiles.
+### Scoring (End of Game)
+- Points awarded for:
+  - **Fields, Pastures, and Fenced Animals**
+  - **Vegetables and Grain**
+  - **Family Members (more is better)**
+  - **House and Renovations**
+  - **Major and Minor Improvements**
+- **Penalties for empty spaces, insufficient food, and missing farm elements**.
 
 ## Exceptions & Special Rules
-- **Workers**: Modify dice rolls by +/-1 per worker spent.
-- **Mines**: Generate Silverlings at the end of each phase.
-- **Monasteries**: Provide special effects based on tile type.
-- **Shipping**: Players gain extra turns when completing certain tiles.
+- **Major Improvements**: Can only be built once per game per player.
+- **Breeding**: 2 animals of the same type produce 1 additional animal if space allows.
+- **House Renovation**: Necessary for expanding family beyond 2 members.
+- **Occupations & Minor Improvements**: Provide bonuses and strategic advantages.
   
-**Build wisely and score big!**
+**Plan ahead and farm efficiently!**
