@@ -1,19 +1,20 @@
 # Rule Refresher
 
-Rule Refresher is a set of AI-generated one-pagers containing a refresher for board game rules.
+**Rule Refresher** is a collection of AI-generated one-pagers providing quick refreshers for board game rules.
+It compiles Markdown files into formatted PDFs using Pandoc and XeLaTeX.
 
 ## Requirements
 
-- [Pandoc](https://pandoc.org/)
-- [XeLaTeX](https://www.tug.org/xetex/)
+Ensure you have the following dependencies installed:
+
+- [Pandoc](https://pandoc.org/) – for converting Markdown files to PDF.
+- [XeLaTeX](https://www.tug.org/xetex/) – for advanced PDF typesetting.
 
 ## Installation
 
-To install the required dependencies, you can use the following commands:
+### Installing Pandoc
 
-### Pandoc
-
-For most systems, you can install Pandoc using the package manager:
+You can install Pandoc using your system's package manager:
 
 ```sh
 # On Debian-based systems
@@ -23,9 +24,9 @@ sudo apt-get install pandoc
 brew install pandoc
 ```
 
-### XeLaTeX
+### Installing XeLaTeX
 
-XeLaTeX can also be installed via package managers. It is part of the TeX Live distribution:
+XeLaTeX is part of the TeX Live distribution and can be installed with:
 
 ```sh
 # On Debian-based systems
@@ -37,8 +38,32 @@ brew install --cask mactex
 
 ## Usage
 
-Use the provided `Makefile` to compile the Markdown files to PDFs.
+To compile the Markdown files into a PDF, simply run:
 
 ```sh
 make
+```
+
+This will:
+- Convert individual Markdown files (`src/*.md`) into PDFs.
+- Generate a bundled PDF (`dist/bundle.pdf`) that combines all Markdown files.
+
+### Customizing the Bundle
+
+By default, **all** Markdown files in the `src/` directory are included in the bundled PDF. However, you can specify which files or folders to include by creating a `.bundleconfig` file in the project root.
+
+#### Using `.bundleconfig`
+
+- Create a `.bundleconfig` file.
+- List the Markdown files or directories you want to include, one per line.
+- A sample configuration is provided in `.bundleconfig.example` to help you get started.
+
+If `.bundleconfig` exists, only the listed files and directories will be included in the bundle.
+
+## Cleaning Up
+
+To remove all generated files (PDFs and build artifacts), run:
+
+```sh
+make clean
 ```
