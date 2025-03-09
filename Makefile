@@ -3,28 +3,25 @@ BUILD_DIR := build
 DIST_DIR := dist
 SRC_FILES := $(wildcard $(SRC_DIR)/*.md)
 PDF_FILES := $(patsubst $(SRC_DIR)/%.md,$(BUILD_DIR)/%.pdf,$(SRC_FILES))
+CONFIG_FILES := $(wildcard config/*)
 BUNDLE_PDF := $(DIST_DIR)/bundle.pdf
 
 all: $(PDF_FILES) $(BUNDLE_PDF)
 
-$(DIST_DIR)/bundle.pdf: $(BUILD_DIR)/bundle.md | $(DIST_DIR)
+$(DIST_DIR)/bundle.pdf: $(BUILD_DIR)/bundle.md $(CONFIG_FILES) | $(DIST_DIR)
 	pandoc $< \
-		-V geometry:a4paper \
-		-V geometry:margin=2cm \
-		-V mainfont="DejaVu Serif" \
-		-V monofont="DejaVu Sans Mono" \
+		--metadata-file=config/metadata.yaml \
+		-H config/header.tex \
 		--pdf-engine=xelatex \
 		-o $@
 
 $(BUILD_DIR)/bundle.md: $(SRC_FILES) | $(BUILD_DIR)
 	cat $(SRC_FILES) > $@
 
-$(BUILD_DIR)/%.pdf: $(SRC_DIR)/%.md | $(BUILD_DIR)
+$(BUILD_DIR)/%.pdf: $(SRC_DIR)/%.md $(CONFIG_FILES) | $(BUILD_DIR)
 	pandoc $< \
-		-V geometry:a4paper \
-		-V geometry:margin=2cm \
-		-V mainfont="DejaVu Serif" \
-		-V monofont="DejaVu Sans Mono" \
+		--metadata-file=config/metadata.yaml \
+		-H config/header.tex \
 		--pdf-engine=xelatex \
 		-o $@
 

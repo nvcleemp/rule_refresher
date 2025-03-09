@@ -1,0 +1,5 @@
+documentclass: article
+fontsize: 10pt
+geometry: a4paper, margin=2cm
+toc: true
+toc-depth: 1
