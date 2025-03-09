@@ -5,7 +5,6 @@ Rule Refresher is a set of AI-generated one-pagers containing a refresher for bo
 ## Requirements
 
 - [Pandoc](https://pandoc.org/)
-- [pdfunite](https://manpages.ubuntu.com/manpages/bionic/man1/pdfunite.1.html)
 - [XeLaTeX](https://www.tug.org/xetex/)
 
 ## Installation
@@ -22,18 +21,6 @@ sudo apt-get install pandoc
 
 # On macOS using Homebrew
 brew install pandoc
-```
-
-### pdfunite
-
-For most systems, you can install pdfunite using the package manager:
-
-```sh
-# On Debian-based systems
-sudo apt-get install poppler-utils
-
-# On macOS using Homebrew
-brew install poppler
 ```
 
 ### XeLaTeX
