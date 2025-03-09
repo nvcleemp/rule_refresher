@@ -7,6 +7,18 @@ BUNDLE_PDF := $(DIST_DIR)/bundle.pdf
 
 all: $(PDF_FILES) $(BUNDLE_PDF)
 
+$(DIST_DIR)/bundle.pdf: $(BUILD_DIR)/bundle.md | $(DIST_DIR)
+	pandoc $< \
+		-V geometry:a4paper \
+		-V geometry:margin=2cm \
+		-V mainfont="DejaVu Serif" \
+		-V monofont="DejaVu Sans Mono" \
+		--pdf-engine=xelatex \
+		-o $@
+
+$(BUILD_DIR)/bundle.md: $(SRC_FILES) | $(BUILD_DIR)
+	cat $(SRC_FILES) > $@
+
 $(BUILD_DIR)/%.pdf: $(SRC_DIR)/%.md | $(BUILD_DIR)
 	pandoc $< \
 		-V geometry:a4paper \
@@ -22,8 +34,7 @@ $(BUILD_DIR):
 $(DIST_DIR):
 	mkdir -p $(DIST_DIR)
 
-$(BUNDLE_PDF): $(PDF_FILES) | $(DIST_DIR)
-	pdfunite $(PDF_FILES) $@
+bundle: $(BUNDLE_PDF)
 
 convert_one: $(BUILD_DIR)/$(file).pdf
 
