@@ -40,3 +40,4 @@
 - **Endgame Strategy**: Timing street closures is key to maximizing points.
 
 **Build thriving streets and make the most money!**
+

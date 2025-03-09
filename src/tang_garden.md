@@ -46,3 +46,4 @@
 - **Solo Mode**: Uses an AI opponent with a specific set of rules.
   
 **Enjoy the Garden!**
+

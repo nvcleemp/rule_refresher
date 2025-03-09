@@ -39,3 +39,4 @@
 - **Occupations & Minor Improvements**: Provide bonuses and strategic advantages.
   
 **Plan ahead and farm efficiently!**
+

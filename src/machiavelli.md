@@ -44,3 +44,4 @@
 - **Expanded District Decks**: Some editions introduce unique districts with special effects.
 
 **Outwit and outbuild your opponents to rule the city!**
+

@@ -39,3 +39,4 @@
 - **Event Cards**: Red cards are discarded after play.
   
 **Terraform wisely!**
+

@@ -43,3 +43,4 @@
 - **Mandatory Planting**: If a player has no available fields, they must harvest.
 
 **Plant wisely, trade shrewdly, and harvest for victory!**
+

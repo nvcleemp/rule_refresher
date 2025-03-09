@@ -44,3 +44,4 @@
 - **Eradication Bonus**: If all cubes of a cured disease are removed, it no longer spreads.
 
 **Work together to save the world!**
+
