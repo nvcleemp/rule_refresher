@@ -4,6 +4,7 @@ DIST_DIR := dist
 SRC_FILES := $(wildcard $(SRC_DIR)/*.md)
 PDF_FILES := $(patsubst $(SRC_DIR)/%.md,$(BUILD_DIR)/%.pdf,$(SRC_FILES))
 CONFIG_FILES := $(wildcard config/*)
+SEPARATOR_FILE := config/separator.md
 BUNDLE_PDF := $(DIST_DIR)/bundle.pdf
 
 all: $(PDF_FILES) $(BUNDLE_PDF)
@@ -15,8 +16,8 @@ $(DIST_DIR)/bundle.pdf: $(BUILD_DIR)/bundle.md $(CONFIG_FILES) | $(DIST_DIR)
 		--pdf-engine=xelatex \
 		-o $@
 
-$(BUILD_DIR)/bundle.md: $(SRC_FILES) | $(BUILD_DIR)
-	cat $(SRC_FILES) > $@
+$(BUILD_DIR)/bundle.md: $(SRC_FILES) $(SEPARATOR_FILE) | $(BUILD_DIR)
+	{ for f in $(SRC_FILES); do cat $(SEPARATOR_FILE); echo; cat "$$f"; echo; done; } | sed '$$d' > $@
 
 $(BUILD_DIR)/%.pdf: $(SRC_DIR)/%.md $(CONFIG_FILES) | $(BUILD_DIR)
 	pandoc $< \
